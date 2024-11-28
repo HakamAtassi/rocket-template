@@ -1,0 +1,12 @@
+[submodule "deps/diplomacy"]
+	path = deps/diplomacy
+	url = git@github.com:chipsalliance/diplomacy.git
+[submodule "deps/cde"]
+	path = deps/cde
+	url = git@github.com:chipsalliance/cde.git
+[submodule "deps/berkeley-hardfloat"]
+	path = deps/berkeley-hardfloat
+	url = git@github.com:ucb-bar/berkeley-hardfloat.git
+[submodule "deps/rocketchip"]
+	path = deps/rocketchip
+	url = git@github.com:chipsalliance/rocket-chip.git
