@@ -1,0 +1,28 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(gcd.GCDSpec, org.scalatest.tools.Framework$$anon$1@643ab5ee, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(gcd.TileLinkSpec, org.scalatest.tools.Framework$$anon$1@643ab5ee, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mGCDSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Gcd should calculate proper greatest common denominator[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mTileLinkSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- allow the client to write sequential data and the manager to receive it *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  svsim.Simulation$UnexpectedEndOfMessages$:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at svsim.Simulation$UnexpectedEndOfMessages$.<clinit>(Simulation.scala:340)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at svsim.Simulation$Controller.readNextAvailableMessage(Simulation.scala:132)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at svsim.Simulation$Controller.processNextMessage(Simulation.scala:206)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at svsim.Simulation$Port.tick(Simulation.scala:398)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.simulator.PeekPokeAPI$testableClock.step(PeekPokeAPI.scala:41)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at gcd.TileLinkSpec.$anonfun$new$3(TLgcdTest.scala:70)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at gcd.TileLinkSpec.$anonfun$new$3$adapted(TLgcdTest.scala:59)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.simulator.EphemeralSimulator$.$anonfun$simulate$1(EphemeralSimulator.scala:25)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.simulator.EphemeralSimulator$.$anonfun$simulate$1$adapted(EphemeralSimulator.scala:25)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.simulator.Simulator.$anonfun$_simulate$1(Simulator.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 3 seconds, 403 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	gcd.GCDSpec[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	gcd.TileLinkSpec[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

@@ -1,13 +1,1 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/hakam/Repos/rocket-template/target/scala-2.13/root_2.13-1.6.jar ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	gcd[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/hakam/Repos/rocket-template/target/scala-2.13/classes/gcd[0m
-[0m[[0m[0mdebug[0m] [0m[0m	gcd/GCD$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/hakam/Repos/rocket-template/target/scala-2.13/classes/gcd/GCD$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	gcd/GCD$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/hakam/Repos/rocket-template/target/scala-2.13/classes/gcd/GCD$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	gcd/GCD$delayedInit$body.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/hakam/Repos/rocket-template/target/scala-2.13/classes/gcd/GCD$delayedInit$body.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	gcd/GCD.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/hakam/Repos/rocket-template/target/scala-2.13/classes/gcd/GCD.class[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
+[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /Users/hakamatassi/Repos/rocket-template/target/scala-2.13/root_2.13-1.6.jar[0m

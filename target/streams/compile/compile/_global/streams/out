@@ -1,2 +1,34 @@
-[0m[[0m[33mwarn[0m] [0m[0m5 feature warnings; re-run with -feature for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:20:48: type LazyModule in package diplomacy is deprecated (since rocketchip 2.0.0): Diplomacy has been split to a standalone library[0m
+[0m[[0m[33mwarn[0m] [0m[0mclass MyClient(implicit p: Parameters) extends LazyModule {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:21:61: method apply in object TLClientParameters is deprecated: Use TLMasterParameters.v1 instead of TLClientParameters[0m
+[0m[[0m[33mwarn[0m] [0m[0m  val node = TLClientNode(Seq(TLMasterPortParameters.v1(Seq(TLClientParameters([0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:27:27: type LazyModuleImp in package diplomacy is deprecated (since rocketchip 2.0.0): Diplomacy has been split to a standalone library[0m
+[0m[[0m[33mwarn[0m] [0m[0m    lazy val module = new LazyModuleImp(this) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:53:49: type LazyModule in package diplomacy is deprecated (since rocketchip 2.0.0): Diplomacy has been split to a standalone library[0m
+[0m[[0m[33mwarn[0m] [0m[0mclass MyManager(implicit p: Parameters) extends LazyModule {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:54:20: type SimpleDevice in package diplomacy is deprecated (since rocketchip 2.0.0): Use freechips.rocketchip.resources.SimpleDevice[0m
+[0m[[0m[33mwarn[0m] [0m[0m  val device = new SimpleDevice("my-device", Seq("tutorial,my-device0"))[0m
+[0m[[0m[33mwarn[0m] [0m[0m                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:56:61: method apply in object TLManagerParameters is deprecated: Use TLSlaveParameters.v1 instead of TLManagerParameters[0m
+[0m[[0m[33mwarn[0m] [0m[0m  val node = TLManagerNode(Seq(TLSlavePortParameters.v1(Seq(TLManagerParameters([0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:69:27: type LazyModuleImp in package diplomacy is deprecated (since rocketchip 2.0.0): Diplomacy has been split to a standalone library[0m
+[0m[[0m[33mwarn[0m] [0m[0m    lazy val module = new LazyModuleImp(this) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:84:62: type LazyModule in package diplomacy is deprecated (since rocketchip 2.0.0): Diplomacy has been split to a standalone library[0m
+[0m[[0m[33mwarn[0m] [0m[0mclass MyClientManagerWrapper(implicit p: Parameters) extends LazyModule {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                             ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:85:18: value LazyModule in package diplomacy is deprecated (since rocketchip 2.0.0): Diplomacy has been split to a standalone library[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val client = LazyModule(new MyClient)[0m
+[0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:86:19: value LazyModule in package diplomacy is deprecated (since rocketchip 2.0.0): Diplomacy has been split to a standalone library[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val manager = LazyModule(new MyManager)[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/main/scala/TLgcd.scala:90:27: type LazyModuleImp in package diplomacy is deprecated (since rocketchip 2.0.0): Diplomacy has been split to a standalone library[0m
+[0m[[0m[33mwarn[0m] [0m[0m    lazy val module = new LazyModuleImp(this) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m11 warnings found[0m
