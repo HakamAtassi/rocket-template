@@ -1,4 +1,0 @@
-[0m[[0m[33mwarn[0m] [0m[0m/Users/hakamatassi/Repos/rocket-template/src/test/scala/TLgcdTest.scala:57:22: value LazyModule in package diplomacy is deprecated (since rocketchip 2.0.0): Diplomacy has been split to a standalone library[0m
-[0m[[0m[33mwarn[0m] [0m[0m    val lazyModule = LazyModule(new MyClientManagerWrapper)[0m
-[0m[[0m[33mwarn[0m] [0m[0m                     ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
