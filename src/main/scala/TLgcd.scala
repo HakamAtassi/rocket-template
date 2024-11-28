@@ -31,11 +31,11 @@ class MyClient(implicit p: Parameters) extends LazyModule {
         val dataCounter = RegInit(1.U(8.W))  // 8-bit data counter
         dataCounter := dataCounter + 1.U
 
-        // Set up the Put transaction
+        //// Set up the Put transaction
         tl.a.bits := edge.Put(
-            fromSource = 1.U,               // Source ID
-            toAddress = 0x10000.U,          // Target address
-            lgSize = log2Ceil((dataCounter.getWidth/8)).U,
+            fromSource = 0.U,               // Source ID
+            toAddress = 0x20000.U,          // Target address
+            lgSize = 0.U,
             data = dataCounter              // Data to send
         )._2
 
@@ -44,15 +44,15 @@ class MyClient(implicit p: Parameters) extends LazyModule {
 
         // Check if the transaction is accepted
         when(tl.a.fire) {
-            printf("Sent data: 0x%x to address: 0x%x\n", dataCounter, 0x10000.U)
+            printf("Sent data: 0x%x to address: 0x%x\n", dataCounter, tl.a.bits.address)
         }
     }
 }
 
-//// recieves requests on A, returns on D
+// recieves requests on A, returns on D
 class MyManager(implicit p: Parameters) extends LazyModule {
   val device = new SimpleDevice("my-device", Seq("tutorial,my-device0"))
-  val beatBytes = 8
+  val beatBytes = 1
   val node = TLManagerNode(Seq(TLSlavePortParameters.v1(Seq(TLManagerParameters(
     address = Seq(AddressSet(0x20000, 0xfff)),
     resources = device.reg,
@@ -76,7 +76,7 @@ class MyManager(implicit p: Parameters) extends LazyModule {
         tl.a.ready := 1.B   // always ready to receive  
 
         when(tl.d.fire) {
-            printf("Received data: 0x%x at address: 0x%x\n", tl.a.bits.data, tl.a.bits.address)
+            printf("Received data: 0x%x\n", tl.a.bits.data)
         }
     }
 }
