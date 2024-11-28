@@ -10,7 +10,8 @@ First, follow [Chisel Template](https://github.com/chipsalliance/chisel-template
 
 ```
 git clone https://github.com/HakamAtassi/rocket-template.git
-git submodule --init --recurse-submodules
+cd rocket-template
+git submodule update --init --recursive
 sbt run
 ```
 
