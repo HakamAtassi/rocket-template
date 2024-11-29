@@ -50,6 +50,10 @@ lazy val root = (project in file("."))
       "org.reflections" % "reflections" % "0.10.2"
     )
   )
-  .settings(commonSettings)```
+  .settings(commonSettings)
+```
 
 
+## Testing
+
+To test the repos configuration, run `sbt test`. The result should be a series of TL transactions printed to terminal. If this is the case, you are good to go. 
