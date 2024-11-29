@@ -20,7 +20,36 @@ If successful, you should see a gcd.v file in your root directory. If not, pleas
 
 ## Adding additional libs
 
-The repo provides rocket chip, diplomacy, and hardfloat out of the box. You may be interested in extending this repo by adding testchipip or perhaps your own ip. This section is intended to you walk you through that process. 
+The repo provides rocket chip, diplomacy, and hardfloat out of the box. You may also be interested in adding a UART to your design, for instance. The rocketchip ecosystem keeps UARTs and other useful periphirals in rocket-chip-blocks. This process will guide you through adding rocket-chip-blocks to this repo. 
 
 
-TODO
+To add rocket-chip-blocks, we must first get the repo into `deps`. This can be achieved through a simple git clone or through a submodule add. 
+
+```
+cd deps
+git clone git@github.com:chipsalliance/rocket-chip-blocks.git
+cd ..
+```
+
+Then add the following to build.sbt. 
+
+```
+lazy val rocketchip_blocks = (project in file("deps/rocket-chip-blocks"))
+  .dependsOn(rocketchip)
+  .settings(libraryDependencies ++= rocketLibDeps.value)
+  .settings(commonSettings)
+```
+Then add rocket-chip-blocks as a dependancy to your root project by inserting it into the `dependsOn()` statement. Ex: 
+
+```
+lazy val root = (project in file("."))
+  .dependsOn(rocketchip, rocketchip_blocks)
+  .settings(libraryDependencies ++= rocketLibDeps.value)
+  .settings(
+    libraryDependencies ++= Seq(
+      "org.reflections" % "reflections" % "0.10.2"
+    )
+  )
+  .settings(commonSettings)```
+
+

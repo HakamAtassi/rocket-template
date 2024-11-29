@@ -66,6 +66,9 @@ lazy val chiselSettings = chisel6Settings ++ Seq(
   )
 )
 
+
+
+
 lazy val scalaTestSettings =  Seq(
   libraryDependencies ++= Seq(
     "org.scalatest" %% "scalatest" % "3.2.+" % "test"
@@ -73,6 +76,7 @@ lazy val scalaTestSettings =  Seq(
 )
 
 //// -- Rocket Chip --
+
 
 lazy val hardfloat = freshProject("hardfloat", file("deps/berkeley-hardfloat/hardfloat"))
   .settings(chiselSettings)
@@ -93,6 +97,13 @@ lazy val rocketMacros  = (project in rocketChipDir / "macros")
   .settings(commonSettings)
   .settings(scalaTestSettings)
 
+
+lazy val rocketchip_blocks = (project in file("deps/rocket-chip-blocks"))
+  .dependsOn(rocketchip)
+  .settings(libraryDependencies ++= rocketLibDeps.value)
+  .settings(commonSettings)
+
+
 lazy val rocketchip = freshProject("rocketchip", rocketChipDir)
   .dependsOn(hardfloat, rocketMacros, diplomacy, cde)
   .settings(commonSettings)
@@ -107,16 +118,10 @@ lazy val rocketchip = freshProject("rocketchip", rocketChipDir)
   )
 
 
-
-
-
-
-
-
 lazy val rocketLibDeps = (rocketchip / Keys.libraryDependencies)
 
 lazy val root = (project in file("."))
-  .dependsOn(rocketchip)
+  .dependsOn(rocketchip, rocketchip_blocks)
   .settings(libraryDependencies ++= rocketLibDeps.value)
   .settings(
     libraryDependencies ++= Seq(
